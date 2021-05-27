@@ -211,8 +211,8 @@ def nood_page(event, page_number, loaded_plugins, prefix):
         for x in helpable_plugins
     ]
     pairs = list(zip(accessary[::number_of_cols], accessary[1::number_of_cols], accessary[2::number_of_cols]))
-    if len(modules) % number_of_cols == 1:
-        pairs.append((modules[-1],))
+    if len(accessary) % number_of_cols == 1:
+        pairs.append((accessary[-1],))
     max_num_pages = ceil(len(pairs) / number_of_rows)
     modulo_page = page_number % max_num_pages
     pairs = pairs[
