@@ -1,1 +1,8 @@
 netflix
+account
+amazon
+hotstar
+sonyliv
+kyc
+paytmkyc
+mobiwik
