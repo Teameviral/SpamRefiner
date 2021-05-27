@@ -159,7 +159,7 @@ def paginate_help(event, page_number, loaded_plugins, prefix):
         for x in helpable_plugins
     ]
     pairs = list(zip(accessary[::number_of_cols], accessary[1::number_of_cols], accessary[2::number_of_cols]))
-    if len(modules) % number_of_cols == 1:
+    if len(accessary) % number_of_cols == 1:
         pairs.append((accessary[-1],))
     max_num_pages = ceil(len(pairs) / number_of_rows)
     modulo_page = page_number % max_num_pages
@@ -204,7 +204,7 @@ def nood_page(event, page_number, loaded_plugins, prefix):
         if not p.startswith("_"):
             helpable_plugins.append(p)
     helpable_plugins = sorted(helpable_plugins)
-    modules = [
+    accessary = [
         custom.Button.inline(
             "{}".format(x.replace("_", " ")), data="help_plugin_{}".format(x)
         )
