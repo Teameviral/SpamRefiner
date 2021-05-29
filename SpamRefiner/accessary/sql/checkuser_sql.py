@@ -3,10 +3,7 @@ from sqlalchemy import (
     String,
     Integer
 )
-from SpamRefiner.accessary.sql import (
-    SESSION,
-    BASE
-)
+from SpamRefiner.accessary.sql import BASE, SESSION
 
 
 class Moidata(BASE):
