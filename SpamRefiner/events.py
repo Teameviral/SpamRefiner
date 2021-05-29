@@ -184,7 +184,7 @@ def load_module(shortname):
         mod.tbot = tbot
         mod.logger = logging.getLogger(shortname)
         spec.loader.exec_module(mod)
-        sys.accessary["SpamRefiner.accessary." + shortname] = mod
+        sys.modules["SpamRefiner.accessary." + shortname] = mod
         print("Successfully imported " + shortname)
 
 
